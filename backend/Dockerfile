@@ -23,7 +23,7 @@ RUN chown -R expense:expense /opt/server
 WORKDIR /opt/server
 COPY --from=build /opt/server /opt/server
 
-EXPOSE 8080
+EXPOSE 8080 
 ENV DB_HOST="mysql"
 USER expense
 CMD ["node", "index.js"]
